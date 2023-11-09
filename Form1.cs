@@ -26,7 +26,7 @@ namespace Image_redactor
     public partial class Form1 : Form
     {
         MenuStrip menu;
-        ToolStrip toolstrip;
+        System.Windows.Forms.ToolStrip toolstrip;
         Panel p;
         ColorDialog colordiag;
         OpenFileDialog openfilDia;
@@ -47,32 +47,66 @@ namespace Image_redactor
             menu = new MenuStrip();
             
              windowMenuFile = new ToolStripMenuItem("File");
-             windowMenuEdit = new ToolStripMenuItem("Edit");
-             windowMenuHelp = new ToolStripMenuItem("Help");
-             windowMenuNEW = new ToolStripMenuItem("NEW");
-             windowMenuNEW.Text = "&New";
+             windowMenuEdit = new ToolStripMenuItem("Muuta");
+             windowMenuHelp = new ToolStripMenuItem("Abi");
+            
+            windowMenuNEW = new ToolStripMenuItem("Uus");
+            windowMenuNEW.Text = "&Uus";
             // Assign a shortcut key.
             windowMenuNEW.ShortcutKeys = Keys.Control | Keys.N;
             // Make the menu item visible.
             windowMenuNEW.Visible = true;
             // Display the shortcut key combination.
             windowMenuNEW.ShowShortcutKeys = true;
-            windowMenuOpen = new ToolStripMenuItem("Open");
-            windowMenuNEW.Text = "&New";
+            windowMenuOpen = new ToolStripMenuItem("Ava");
+            windowMenuOpen.Text = "&Ava";
             // Assign a shortcut key.
-            windowMenuNEW.ShortcutKeys = Keys.Control | Keys.N;
+            windowMenuOpen.ShortcutKeys = Keys.F3;
             // Make the menu item visible.
-            windowMenuNEW.Visible = true;
+            windowMenuOpen.Visible = true;
             // Display the shortcut key combination.
-            windowMenuNEW.ShowShortcutKeys = true;
+            windowMenuOpen.ShowShortcutKeys = true;
+            
+            
 
-            windowMenuSave = new ToolStripMenuItem("Save");
-             windowMenuExit = new ToolStripMenuItem("Exit");
-             windowMenuUndo = new ToolStripMenuItem("Undo");
-             windowMenuReno = new ToolStripMenuItem("Reno");
-             windowMenuPen = new ToolStripMenuItem("Pen");
-             windowMenuStyle = new ToolStripMenuItem("Style");
+            windowMenuSave = new ToolStripMenuItem("Salvesta");
+            windowMenuSave.Text = "&Salvesta";
+            // Assign a shortcut key.
+            windowMenuSave.ShortcutKeys = Keys.F2;
+            // Make the menu item visible.
+            windowMenuSave.Visible = true;
+            // Display the shortcut key combination.
+            windowMenuSave.ShowShortcutKeys = true;
+            windowMenuExit = new ToolStripMenuItem("Sule");
+            windowMenuExit.Text = "&Sule";
+            // Assign a shortcut key.
+            windowMenuExit.ShortcutKeys = Keys.Alt | Keys.X;
+            // Make the menu item visible.
+            windowMenuExit.Visible = true;
+            // Display the shortcut key combination.
+            windowMenuExit.ShowShortcutKeys = true;
+            windowMenuUndo = new ToolStripMenuItem("Undo");
+            windowMenuUndo.Text = "&Undo";
+            // Assign a shortcut key.
+            windowMenuUndo.ShortcutKeys = Keys.Control | Keys.Z;
+            // Make the menu item visible.
+            windowMenuUndo.Visible = true;
+            // Display the shortcut key combination.
+            windowMenuUndo.ShowShortcutKeys = true;
+            windowMenuReno = new ToolStripMenuItem("Reno");
+            windowMenuReno.Text = "&Reno";
+            // Assign a shortcut key.
+            windowMenuReno.ShortcutKeys = Keys.Control | Keys.Shift | Keys.Z;
+            // Make the menu item visible.
+            windowMenuReno.Visible = true;
+            // Display the shortcut key combination.
+            windowMenuReno.ShowShortcutKeys = true;
+            windowMenuPen = new ToolStripMenuItem("Pliiats");
+            windowMenuPen.Checked = true;
+             windowMenuStyle = new ToolStripMenuItem("Stiil");
+            windowMenuStyle.Checked = true;
              windowMenuSolid = new ToolStripMenuItem("Solid");
+            windowMenuSolid.Checked = true;
              windowMenuDot = new ToolStripMenuItem("Dot");
              windowMenuDASHDOTDOT = new ToolStripMenuItem("DashDOTDOT");
 
@@ -83,8 +117,14 @@ namespace Image_redactor
 
 
 
-             windowMenuAbout = new ToolStripMenuItem("About");
-
+             windowMenuAbout = new ToolStripMenuItem("About(Umbes)");
+            windowMenuAbout.Text = "&About(Umbes)";
+            // Assign a shortcut key.
+            windowMenuAbout.ShortcutKeys = Keys.F1;
+            // Make the menu item visible.
+            windowMenuAbout.Visible = true;
+            // Display the shortcut key combination.
+            windowMenuAbout.ShowShortcutKeys = true;
 
 
 
@@ -129,6 +169,7 @@ namespace Image_redactor
             //// Display the shortcut key combination.
             //windowMenuNEW.ShowShortcut = true;
         }
+
 
     }
     
